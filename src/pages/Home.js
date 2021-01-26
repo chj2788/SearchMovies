@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CastGrid from '../components/cast/CastGrid';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrid from '../components/show/ShowGrid';
@@ -15,6 +15,10 @@ const Home = () => {
   const onInputChange = event => {
     setInput(event.target.value);
   };
+
+  useEffect(() => {
+    return () => {};
+  }, [searchOptions]);
 
   const onSearch = () => {
     apiGet(`/search/${searchOptions}?q=${input}`).then(result => {
