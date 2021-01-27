@@ -4,9 +4,10 @@ import CastGrid from '../components/cast/CastGrid';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrid from '../components/show/ShowGrid';
 import { apiGet } from '../misc/config';
+import { useLastQuery } from '../misc/custom-hooks';
 
 const Home = () => {
-  const [input, setInput] = useState('');
+  const [input, setInput] = useLastQuery();
   const [results, setResults] = useState(null);
   const [searchOptions, setSearchOptions] = useState('shows');
 
@@ -23,7 +24,6 @@ const Home = () => {
   const onSearch = () => {
     apiGet(`/search/${searchOptions}?q=${input}`).then(result => {
       setResults(result);
-      console.log(result);
     });
   };
 
@@ -50,8 +50,6 @@ const Home = () => {
   const onRadioChange = event => {
     setSearchOptions(event.target.value);
   };
-
-  console.log(searchOptions);
 
   return (
     <MainPageLayout>
