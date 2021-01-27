@@ -5,7 +5,6 @@ import Cast from '../components/show/Cast';
 import Details from '../components/show/Details';
 import Seasons from '../components/show/Seasons';
 import ShowMain from '../components/show/ShowMain';
-import { apiGet } from '../misc/config';
 import { useShow } from '../misc/custom-hooks';
 import { InfoBlock, ShowPageWrapper } from './Show.styled';
 
