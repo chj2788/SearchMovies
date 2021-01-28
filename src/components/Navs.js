@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+import React, { memo } from 'react';
 import { useLocation } from 'react-router-dom';
 import { LinkStyled, NavList } from './Nav.styled';
 
@@ -10,7 +10,6 @@ const LINKS = [
 
 const Navs = () => {
   const location = useLocation();
-  console.log('location', location);
 
   return (
     <div>
@@ -30,4 +29,4 @@ const Navs = () => {
   );
 };
 
-export default Navs;
+export default memo(Navs);

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import CastGrid from '../components/cast/CastGrid';
 import CustomRadio from '../components/CustomRadio';
 import MainPageLayout from '../components/MainPageLayout';
@@ -12,6 +12,20 @@ import {
   SearchInput,
 } from './Home.styled';
 
+const renderResults = results => {
+  if (results && results.length === 0) {
+    return <div>No results</div>;
+  }
+  if (results && results.length > 0) {
+    return results[0].show ? (
+      <ShowGrid data={results} />
+    ) : (
+      <CastGrid data={results} />
+    );
+  }
+  return null;
+};
+
 const Home = () => {
   const [input, setInput] = useLastQuery();
   const [results, setResults] = useState(null);
@@ -19,9 +33,12 @@ const Home = () => {
 
   const isShow = searchOptions === 'shows';
 
-  const onInputChange = event => {
-    setInput(event.target.value);
-  };
+  const onInputChange = useCallback(
+    event => {
+      setInput(event.target.value);
+    },
+    [setInput]
+  );
 
   useEffect(() => {
     return () => {};
@@ -39,23 +56,9 @@ const Home = () => {
     }
   };
 
-  const renderResults = () => {
-    if (results && results.length === 0) {
-      return <div>No results</div>;
-    }
-    if (results && results.length > 0) {
-      return results[0].show ? (
-        <ShowGrid data={results} />
-      ) : (
-        <CastGrid data={results} />
-      );
-    }
-    return null;
-  };
-
-  const onRadioChange = event => {
+  const onRadioChange = useCallback(event => {
     setSearchOptions(event.target.value);
-  };
+  }, []);
 
   return (
     <MainPageLayout>
@@ -92,7 +95,7 @@ const Home = () => {
           Search
         </button>
       </SearchButtonWrapper>
-      {renderResults()}
+      {renderResults(results)}
     </MainPageLayout>
   );
 };
