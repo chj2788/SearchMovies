@@ -1,6 +1,6 @@
 {
-  "homepage": "https://chj2788.github.io/box-office",
-  "name": "box-office",
+  "homepage": "https://chj2788.github.io/searchMovies",
+  "name": "searchMovies",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
