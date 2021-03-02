@@ -24,7 +24,7 @@ const RadioWrapper = styled.label`
     height: 16px;
     width: 16px;
     background-color: #fff;
-    border: 2px solid ${({ theme }) => theme.mainColors.blue};
+    border: 2px solid ${({ theme }) => theme.mainColors.light};
     border-radius: 50%;
   }
 

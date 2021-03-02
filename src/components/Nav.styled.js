@@ -24,7 +24,7 @@ export const LinkStyled = styled(Link)`
       height: 2px;
       left: 0%;
       bottom: 0;
-      background-color: ${({ theme }) => theme.mainColors.blue};
+      background-color: ${({ theme }) => theme.mainColors.light};
       animation: slide-in 0.3s ease-in forwards;
       @keyframes slide-in {
         from {

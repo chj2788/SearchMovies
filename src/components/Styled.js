@@ -40,7 +40,6 @@ export const Star = styled.div`
   display: inline-block;
   width: 18px;
   height: 18px;
-  /* background-color: #ffc806; */
   background-color: ${props => (props.active ? '#ffc806' : '#ddd')};
 
   //adding shape

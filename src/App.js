@@ -7,7 +7,9 @@ import Starred from './pages/Starred';
 
 const theme = {
   mainColors: {
-    blue: '#2400ff',
+    blue: '#005cb2',
+    light: '#6ab7ff',
+    sky: '#58a5f0',
     gray: '#c6c6c6',
     dark: '#353535',
   },

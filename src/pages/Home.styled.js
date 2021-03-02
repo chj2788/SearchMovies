@@ -35,9 +35,9 @@ export const SearchButtonWrapper = styled.div`
 
   button {
     color: #fff;
-    background-color: ${({ theme }) => theme.mainColors.blue};
+    background-color: ${({ theme }) => theme.mainColors.sky};
     margin: auto;
-    padding: 10px 50px;
+    padding: 10px 90px;
     font-size: 15px;
     border: none;
     outline: none;
