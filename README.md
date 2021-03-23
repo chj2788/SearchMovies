@@ -1,6 +1,6 @@
 # SearchMovies
 
-"SearchMovies" is a simple project I created to improve my front-end development knowledge. I practiced using external API, react, and styled components.
+"SearchMovies" is a simple project I created to improve my front-end development knowledge. I practiced using React, Redux hooks, external API, and Styled components.
 
 ## Preview
 
@@ -9,7 +9,10 @@
 
 ## Overview
 
-A movie search app created by React and Styled Components.
+- Dynamic client side rendering with React Router to maintain the seamless user experience.
+- Fetch data from movies API in order to display the search results while a starred movies list stored in a local storage.
+- Incorporate Redux hooks to architect highly scalable front-end state management and optimized components using React hooks.
+- Combine best features of mobile app and web by deploying a Progressive Web App.
 
 - Features
     - search shows and actors.
