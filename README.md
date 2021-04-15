@@ -18,8 +18,3 @@
     - search shows and actors.
     - add your favorite shows to starred page.
     - Click "read more" to find detailed information about the selected show.
-
-## Currently Working on...
-- Responsive design + PWA
-- Optimize components with React hooks
-- Deploy the app
