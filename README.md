@@ -2,6 +2,9 @@
 
 "SearchMovies" is a simple project I created to improve my front-end development knowledge. I practiced using React, Redux hooks, external API, and Styled components.
 
+## Demo
+Deployed with github pages. [Click to see the demo](https://chj2788.github.io/SearchMovies/#/)
+
 ## Preview
 
 ![searchMovies](https://user-images.githubusercontent.com/62086687/109641446-0dfd9c00-7b95-11eb-8761-eb6fe4c2cc7e.PNG)
